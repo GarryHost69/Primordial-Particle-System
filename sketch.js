@@ -11,11 +11,9 @@ function setup() {
 	grecol = color(0, 255, 0);
 	yelcol = color(255, 225, 0);
 	brocol = color(165, 42, 42);
-	for (let i = 20; i < windowWidth - 20; i += 40) {
-		for (let j = 20; j < windowHeight - 20; j += 40) {
-			particles.push(new Particle(i, j));
-		}
-	}
+	for (let i = 0; i < 500; i++) {
+      particles.push(new Particle(random(20, windowWidth - 20), random(20, windowHeight - 20)));
+    }
 }
 
 function draw() {
